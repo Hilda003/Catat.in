@@ -1,4 +1,4 @@
-package com.app.catatin.ui.splashscreen
+package com.app.catatin.ui.auth
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -27,7 +27,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.app.catatin.R
 import com.app.catatin.component.GradientLogo
-import com.app.catatin.component.LoginForm
 import com.app.catatin.component.RegisterForm
 import com.app.catatin.utils.JakartaPlus
 

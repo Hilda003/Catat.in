@@ -11,6 +11,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.createGraph
+import com.app.catatin.navigation.BottomNavigation
 import com.loomi.catatin.ui.theme.CatatinV2Theme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +24,27 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CatatinV2Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+fun MainScreen(
+    navController: NavHostController = rememberNavController()
+) {
+    Scaffold(
+        modifier = Modifier.fillMaxSize()
+            .fillMaxSize(),
+        bottomBar = { BottomNavigation(navController = navController) },
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CatatinV2Theme {
-        Greeting("Android")
+    ) {
+        // Content of the main screen
+        Text(
+            text = "Welcome to Catatin",
+            modifier = Modifier.padding(it)
+        )
     }
+
 }

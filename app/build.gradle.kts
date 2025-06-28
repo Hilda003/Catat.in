@@ -44,13 +44,17 @@ dependencies {
 
 //    Room
     implementation(libs.androidx.room.runtime)
-    ksp("androidx.room:room-compiler:2.7.2")
+    ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.material)
     implementation(libs.androidx.material.icons.extended)
 
 //    splash screen
     implementation(libs.androidx.core.splashscreen)
+
+//    navigation
+    implementation(libs.androidx.navigation.compose)
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

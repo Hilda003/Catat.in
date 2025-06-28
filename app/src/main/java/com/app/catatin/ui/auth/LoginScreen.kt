@@ -1,4 +1,4 @@
-package com.app.catatin.ui.splashscreen
+package com.app.catatin.ui.auth
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
